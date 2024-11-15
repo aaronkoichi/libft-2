@@ -6,7 +6,7 @@
 /*   By: zlee <zlee@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 08:16:03 by zlee              #+#    #+#             */
-/*   Updated: 2024/11/11 09:19:18 by zlee             ###   ########.fr       */
+/*   Updated: 2024/11/15 10:17:17 by zlee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ t_list	*ft_lstlast(t_list *lst)
 	if (lst == NULL)
 		return (NULL);
 	while (buffer->next != NULL)
-		buffer = (buffer)->next;
+		buffer = buffer->next;
 	return (buffer);
 }
 //#include <stdio.h>
