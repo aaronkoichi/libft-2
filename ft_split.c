@@ -6,7 +6,7 @@
 /*   By: zlee <zlee@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 15:58:40 by zlee              #+#    #+#             */
-/*   Updated: 2024/11/14 18:56:53 by zlee             ###   ########.fr       */
+/*   Updated: 2024/11/15 10:58:35 by zlee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,18 +63,19 @@ static char	**iter_arr(char const *s, char c, int size, char **arr)
 	int	count;
 	int	index;
 
-	count = -1;
+	count = 0;
 	index = 0;
 	while (count < size)
 	{
 		while (s[index] == c)
 			index++;
-		arr[++count] = append_arr(s, c, &index);
+		arr[count] = append_arr(s, c, &index);
 		if (!arr[count])
 		{
 			free_arr(arr, count);
 			return (NULL);
 		}
+		count++;
 	}
 	arr[size] = NULL;
 	return (arr);

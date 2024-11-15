@@ -6,7 +6,7 @@
 /*   By: zlee <zlee@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:32:42 by zlee              #+#    #+#             */
-/*   Updated: 2024/11/14 12:45:36 by zlee             ###   ########.fr       */
+/*   Updated: 2024/11/15 11:08:14 by zlee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned char	*initial_s;
 	size_t			count;
 
-	if (!dest && !src)
-		return (NULL);
 	count = 0;
 	initial_d = (unsigned char *)dest;
 	initial_s = (unsigned char *)src;
@@ -30,15 +28,14 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-//#include <stdio.h>
-//#include <string.h>
-//int	main(void)
-//{
-	//char str[] = "Start stop";
+// #include <stdio.h>
+// #include <string.h>
+// int	main(void)
+// {
+// 	char str[] = "Start stop";
 //
-	//printf("%s\n", str);
+// 	printf("%s\n", str);
 //
-	//ft_memcpy((void *)0 , (void*)0, 3 * sizeof(char));
+// 	memcpy((void *)0 , (void*)0, 3 * sizeof(char));
 //
-	//printf("%s\n", str);
 //}

@@ -6,7 +6,7 @@
 /*   By: zlee <zlee@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 09:04:46 by zlee              #+#    #+#             */
-/*   Updated: 2024/11/14 13:43:55 by zlee             ###   ########.fr       */
+/*   Updated: 2024/11/15 10:44:35 by zlee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!s)
 		return (0);
 	if (start >= ft_strlen(s))
-		len = 0;
+		return (ft_strdup(""));
 	else if ((start + len) >= ft_strlen(s))
 		len = ft_strlen(s) - start;
 	substr = (char *)malloc((len + 1) * sizeof(char));
